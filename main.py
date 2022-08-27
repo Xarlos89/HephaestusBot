@@ -1,10 +1,9 @@
-from discord.ext.commands import Bot
-from discord.ext import commands
-import discord
 import os
+import discord
+from discord.ext.commands import Bot
 
 intents = discord.Intents.default()
-bot = Bot(command_prefix='>', intents=intents) # The prefix used for the bot. 
+bot = Bot(command_prefix='>', intents=intents, help_command=None)
 
 
 @bot.event
