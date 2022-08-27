@@ -4,7 +4,6 @@ import discord
 import os
 
 intents = discord.Intents.default()
-intents.message_content = True
 bot = Bot(command_prefix='>', intents=intents) # The prefix used for the bot. 
 
 
