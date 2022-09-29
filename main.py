@@ -15,7 +15,11 @@ async def on_ready():
 	await bot.change_presence(activity = discord.Activity(type = discord.ActivityType.watching, name = 'you develop me.'))
 	print('Up and running.')
 
-	
+
+@bot.slash_command(guild_ids=[900302240559018015], description="testing slash command")
+async def checkslash(ctx):
+	await ctx.respond(content="slash command works.")
+
 @bot.command()
 async def hi(ctx):
     await ctx.send("Oh, Hi there.")
