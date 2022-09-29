@@ -5,9 +5,8 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import requests
 
-# intents = discord.Intents.default()
-bot = Bot(command_prefix='>')
-bot.remove_command("help")
+intents = discord.Intents().all()
+bot = Bot(command_prefix='>>', intents=intents, help_command=None)
 
 
 @bot.event
@@ -33,6 +32,12 @@ async def imbored(ctx):
 	await ctx.send("I'm bored too, let's do this: " + activity + ". It's " + type + " and you could involve " + str(participants) + " people " + price)
 
 if __name__ == "__main__":
-
-	bot.run(os.environ["TOKEN"])
+	"""
+  	This prevents replit from blocking us with too many requests.
+	If the system gets req blocked, we kill the system and jump to a new IP
+  	"""
+	try:
+		bot.run(os.environ["TOKEN"])
+	except:
+		os.system("kill 1")
 
