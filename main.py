@@ -19,7 +19,7 @@ async def on_ready():
 async def hi(ctx):
     await ctx.send("Oh, Hi there.")
 
-@bot.commmand()
+@bot.command()
 async def imbored(ctx):	
 	data = requests.get('https://www.boredapi.com/api/activity/').json()
 	activity = data["activity"]
