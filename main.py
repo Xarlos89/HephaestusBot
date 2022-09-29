@@ -8,6 +8,9 @@ import requests
 intents = discord.Intents().all()
 bot = Bot(command_prefix='>>', intents=intents, help_command=None)
 
+@bot.slash_command(guild_ids=[900302240559018015], description="testing slash command")
+async def checkslash(ctx):
+	await ctx.respond(content="slash command works.")
 
 @bot.event
 async def on_ready():
