@@ -3,6 +3,7 @@ import discord
 from discord import Member
 from discord.ext import commands
 from discord.ext.commands import Bot
+import requests
 
 # intents = discord.Intents.default()
 bot = Bot(command_prefix='>')
@@ -19,6 +20,17 @@ async def on_ready():
 async def hi(ctx):
     await ctx.send("Oh, Hi there.")
 
+@bot.commmand()
+async def imbored(ctx):	
+	data = requests.get('https://www.boredapi.com/api/activity/').json()
+	activity = data["activity"]
+	type = data["type"]
+	participants = data["participants"]
+	if data["price"] <0.5:
+		price = 'and is not too expensive'
+	else:
+		price = 'and is a bit expensive'
+	await ctx.send("I'm bored too, let's do this: " + activity + ". It's " + type + " and you could involve " + str(participants) + " people " + price)
 
 if __name__ == "__main__":
 
