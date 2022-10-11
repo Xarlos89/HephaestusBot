@@ -14,3 +14,6 @@ To contribute to the bot:
 3. Practical Python will review and either work with you on changes / merge and deploy the changes. 
 
 Please keep changes to the 1 feature, 1 pull rule. This helps to keep things organized and easy to roll back if things break. 
+
+## Future plans
+Since this bot is a community project, I'd like to only point in the direction fo Slash commands, and start this bot off using them. 
