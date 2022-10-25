@@ -24,7 +24,22 @@ async def hi(ctx):
 
 @bot.command()
 async def imbored(ctx):	
-	await ctx.send(imbored())
+	await ctx.send(functions.imbored())
+
+@bot.command()
+async def head(ctx, url):
+	try:
+		await ctx.send(
+			embed=discord.Embed(
+				title=f"Headers for {url}:",
+				description=f"```{functions.head(url)}```",
+				timestamp=ctx.message.created_at
+			),
+			reference=ctx.message
+		)
+	
+	except functions.requests.exceptions.MissingSchema:
+		await ctx.send("URL doesn't contain a **http scheme**", reference=ctx.message)
 
 if __name__ == "__main__":
 		bot.run("TOKEN")
