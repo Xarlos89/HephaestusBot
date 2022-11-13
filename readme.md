@@ -1,6 +1,6 @@
 ## HephaestusBot
 
-HephaestusBot is a Py-Cord / Discrod.py bot template, for use by anyone who wants to start their own bot.
+HephaestusBot is a Py-Cord / Discord.py bot template, for use by anyone who wants to start their own bot.
 - Supports slash commands
 - Supports cogs
 - Supports a safer "Tokenless" file. You run the file with a token as an arg. 
