@@ -1,19 +1,34 @@
 ## HephaestusBot
 
-HephaestusBot is a Discord.py bot developed by the members of Practical Python. 
+HephaestusBot is a Py-Cord / Discrod.py bot template, for use by anyone who wants to start their own bot.
+- Supports slash commands
+- Supports cogs
+- Supports a safer "Tokenless" file. You run the file with a token as an arg. 
 
-The bot is free, and open source. Anyone is welcome to contribute, however this bot will be kept fairly basic, as it is used as a learning tool. 
+The bot is free, and open source. Anyone is welcome to fork this project.
+
 
 Feel free to check out our other projects at https://xarlos89.github.io/PracticalPython/
 
-## Contributing to this project
 
-To contribute to the bot:
-1. Open a new pull request. 
-2. Commit your changes to the pull request.
-3. Practical Python will review and either work with you on changes / merge and deploy the changes. 
 
-Please keep changes to the 1 feature, 1 pull rule. This helps to keep things organized and easy to roll back if things break. 
 
-## Future plans
-Since this bot is a community project, I'd like to only point in the direction fo Slash commands, and start this bot off using them. 
+## Using this bot
+
+Install your discord.py libraries.
+
+```
+pip install discord.py
+pip install py-cord
+```
+
+Open CMD and cd into the project directory. 
+
+Now run this bot using the command
+
+```
+python main.py YOUR-BOT-TOKEN-GOES-HERE
+```
+
+The bot will automatically read all files in the "cogs" folder, and load them into the bot.
+This bot also keeps your secret safe by passing it in as an argument, rather than placing it in the script itself.
