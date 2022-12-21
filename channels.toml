@@ -1,0 +1,13 @@
+[mod_channels]
+verification_channel = 1055126587512721439
+quarantine_channel = 953647309609132102
+
+[normal_channels]
+general_channel = 1031644670436061327
+
+[log_channels]
+chat_log = 1043607758685089932
+mod_log = 1055124663526752297
+join_log = 1043967844934762556
+user_log = 1044331443884654692
+verification_log = 1043621605940674580

@@ -5,7 +5,7 @@ pip install discord.py
 pip install py-cord
 
 """
-
+import toml
 import os
 import sys
 import discord
@@ -13,6 +13,7 @@ from discord.ext import commands
 
 # This sets the prefix to use for commands. Here, we use a Slash. 
 bot = commands.Bot(command_prefix = '/', intents=discord.Intents.all())
+channels = toml.load('channels.toml')
 
 
 # In this function, we load all the files
@@ -38,7 +39,7 @@ def load_token_and_run():
 
 if __name__ == "__main__":
     load_cogs()
-    load_key_and_run()
+    load_token_and_run()
 
 
 
