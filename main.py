@@ -38,7 +38,7 @@ def load_token_and_run():
 
 if __name__ == "__main__":
     load_cogs()
-    load_key_and_run()
+    load_token_and_run()
 
 
 
